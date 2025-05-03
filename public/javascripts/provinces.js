@@ -300,8 +300,13 @@ function loadDistricts(provinceCode, selector = 'select[name="district"]') {
     
     // Tải dữ liệu từ API proxy
     console.log(`Đang tải dữ liệu quận/huyện cho tỉnh/thành phố ${provinceCode} từ API...`);
+    
+    // Find province object to get its code
+    const provinceObj = provincesCache?.find(p => p.code === provinceCode || p.name === provinceCode);
+    const codeToUse = provinceObj?.code || provinceCode;
+    
     $.ajax({
-      url: `${API_BASE_URL}/provinces/${provinceCode}/districts`,
+      url: `${API_BASE_URL}/provinces/${encodeURIComponent(codeToUse)}/districts`,
       type: 'GET',
       dataType: 'json',
       timeout: 5000,
@@ -448,4 +453,4 @@ $(document).ready(function() {
       console.error("Error when trying to load provinces data:", error);
     }
   }, 500); // Đợi 500ms để đảm bảo DOM đã sẵn sàng
-}); 
+});

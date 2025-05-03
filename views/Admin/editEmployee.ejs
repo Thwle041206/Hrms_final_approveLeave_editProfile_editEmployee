@@ -164,23 +164,23 @@
                             <div class="col-sm-3">
                                 <select class="form-control" name="province" required>
                                     <option value="">City/Province...</option>
-                                    <% if (employee.provinceCode) { %>
-                                        <option value="<%= employee.provinceCode %>" selected data-name="<%= employee.province %>"><%= employee.province %></option>
+                                    <% if (employee.province) { %>
+                                        <option value="<%= employee.provinceCode || '' %>" selected data-name="<%= employee.province %>"><%= employee.province %></option>
                                     <% } %>
                                 </select>
                                 <span class="help-block error-message" style="display:none; color:#a94442;">Province is required!</span>
                             </div>
                             <div class="col-sm-3">
-                                <select class="form-control" name="district" required <%= employee.districtCode ? '' : 'disabled' %>>
+                                <select class="form-control" name="district" required <%= employee.province ? '' : 'disabled' %>>
                                     <option value="">Select district...</option>
-                                    <% if (employee.districtCode) { %>
-                                        <option value="<%= employee.districtCode %>" selected data-name="<%= employee.district %>"><%= employee.district %></option>
+                                    <% if (employee.district) { %>
+                                        <option value="<%= employee.districtCode || '' %>" selected data-name="<%= employee.district %>"><%= employee.district %></option>
                                     <% } %>
                                 </select>
                                 <span class="help-block error-message" style="display:none; color:#a94442;">District is required!</span>
                             </div>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" placeholder="Detailed address..." name="detailedAddress" required minlength="10" title="Minimum 10 characters (Vietnamese format)">
+                                <input type="text" class="form-control" placeholder="Detailed address..." name="detailedAddress" value="<%= employee.detailedAddress || '' %>" required minlength="10" title="Minimum 10 characters (Vietnamese format)">
                                 <span class="help-block error-message" style="display:none; color:#a94442;">Detailed address is required!</span>
                             </div>
                         </div>
@@ -486,6 +486,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.js" charset="UTF-8"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.js" charset="UTF-8"></script>
     <script src="/javascripts/sidebar_menu.js"></script>
+    <!-- Provinces data script for address dropdowns -->
+<script src="/javascripts/provinces.js"></script>
     <script src="/javascripts/bootstrap-select.min.js"></script>
     <script language="Javascript" type="text/javascript">
       function onlyAlphabets(e, t) {
@@ -845,8 +847,7 @@ $(document).ready(function() {
     </div>
   </div>
 
-<!-- Provinces data script for address dropdowns -->
-<script src="/javascripts/provinces.js"></script>
+
 
 <script>
 $(document).ready(function() {

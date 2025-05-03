@@ -55,7 +55,7 @@ let users = [
     contactNumber: "325432011",
     photo: "/images/default-avatar.png",
     supervisor: "Admin Admin", // Will be set after admin is created
-    officeEmail: "pma.personal@email.com",
+    officeEmail: "pmad.personal@email.com",
     department: "Quality Assurance",
     designation: "Project Manager",
     jobTitle: "Backend Developer",
@@ -85,7 +85,7 @@ let users = [
     contactNumber: "325432011",
     photo: "/images/default-avatar.png",
     supervisor: "Admin Admin", // Will be set after admin is created
-    officeEmail: "pma.personal@email.com",
+    officeEmail: "pman.personal@email.com",
     department: "Quality Assurance",
     designation: "Project Manager",
     jobTitle: "Backend Developer",
@@ -115,7 +115,7 @@ let users = [
     contactNumber: "325432011",
     photo: "/images/default-avatar.png",
     supervisor: "Project manager", // Will be set after admin is created
-    officeEmail: "pmb.personal@email.com",
+    officeEmail: "pmbv.personal@email.com",
     department: "Quality Assurance",
     designation: "Software Engineer",
     jobTitle: "Software Engineer",
@@ -180,7 +180,7 @@ let users = [
     contactNumber: "325432011",
     photo: "/images/default-avatar.png",
     supervisor: "Project manager", // Will be set after admin is created
-    officeEmail: "ym.personal@email.com",
+    officeEmail: "ymv.personal@email.com",
     department: "Quality Assurance",
     designation: "Software Engineer",
     jobTitle: "Software Engineer",
@@ -212,7 +212,7 @@ let users = [
     contactNumber: "325432011",
     photo: "/images/default-avatar.png",
     supervisor: null, // Will be set after admin is created
-    officeEmail: "pmc.personal@email.com",
+    officeEmail: "pmcs.personal@email.com",
     department: "Human Resource",
     designation: "HR Manager",
     jobTitle: "Backend Developer",
@@ -243,7 +243,7 @@ let users = [
     contactNumber: "325432011",
     photo: "/images/default-avatar.png",
     supervisor: null, // Will be set after admin is created
-    officeEmail: "pmc.personal@email.com",
+    officeEmail: "pmgc.personal@email.com",
     department: "Human Resource",
     designation: "HR Manager",
     jobTitle: "Backend Developer",
